@@ -1,0 +1,21 @@
+#general files
+_notes/
+*.f4v
+*.mp4
+.DS_Store
+*.iml
+.idea/
+npm-debug.log
+src/**/*.js
+src/**/*.map
+src/**/*.d.ts
+test/**/*.js
+test/**/*.map
+test/**/*.d.ts
+index.d.ts
+index.js
+index.js.map
+
+#folders
+node_modules/
+coverage/
