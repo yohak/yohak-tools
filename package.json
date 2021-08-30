@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest"
   },
+  "repository": "https://github.com/yohak/yohak-tools",
   "author": "Satoshi Onoda",
   "license": "MIT",
   "devDependencies": {
