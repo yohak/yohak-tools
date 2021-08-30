@@ -1,4 +1,4 @@
-import { NumberRange } from "./index";
+import { NumberRange } from "./types";
 
 export const rangeMap = (
   [a1, a2]: NumberRange,

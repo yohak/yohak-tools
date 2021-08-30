@@ -2,7 +2,7 @@ import {
   numberToPxProps,
   TransformObject,
   transformSingleProps,
-} from "./index";
+} from "./types";
 
 export const extractCurrentTransform = (str: string): TransformObject => {
   const result: TransformObject = {};

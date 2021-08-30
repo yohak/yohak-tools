@@ -1,5 +1,6 @@
 import { nodeListToArray } from "./node-list-to-array";
-import { forceAsArray, SingleOrArray } from "../array/force-as-array";
+import { forceAsArray } from "../array/force-as-array";
+import { SingleOrArray } from "../array/types";
 
 export const addClass = (
   target: SingleOrArray<Element> | NodeList,

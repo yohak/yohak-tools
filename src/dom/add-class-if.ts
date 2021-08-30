@@ -1,7 +1,8 @@
-import { forceAsArray, SingleOrArray } from "../array/force-as-array";
+import { forceAsArray } from "../array/force-as-array";
 import { nodeListToArray } from "./node-list-to-array";
 import { addClass } from "./add-class";
 import { removeClass } from "./remove-class";
+import { SingleOrArray } from "../array/types";
 
 type BooleanFunc = (t: Element) => boolean;
 

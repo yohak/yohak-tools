@@ -4,6 +4,7 @@
   "description": "Utility functions working at YOHAK LLC",
   "main": "src/index.ts",
   "scripts": {
+    "build": "tsc",
     "test": "jest"
   },
   "repository": "https://github.com/yohak/yohak-tools",

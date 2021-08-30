@@ -1,16 +1,13 @@
-import { forceAsArray, SingleOrArray } from "../array/force-as-array";
+import { forceAsArray } from "../array/force-as-array";
 import {
   CSSStyles,
   NumberOrString,
   numberToPxProps,
   TransformObject,
   transformSingleProps,
-} from "./index";
-import {
-  extractCurrentTransform,
-  isPxProp,
-  isTransformProp,
-} from "./_internal";
+} from "./types";
+import { extractCurrentTransform, isPxProp, isTransformProp } from "./utils";
+import { SingleOrArray } from "../array/types";
 
 export const setStyle = (
   target: SingleOrArray<HTMLElement>,

@@ -1,4 +1,4 @@
-import { extractCurrentTransform } from "./_internal";
+import { extractCurrentTransform } from "./utils";
 
 describe("extractCurrentTranslate", () => {
   it("should find translateValue", () => {
