@@ -1,6 +1,6 @@
 {
   "name": "yohak-tools",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Utility functions working at YOHAK LLC",
   "main": "src/index.ts",
   "scripts": {
