@@ -1,4 +1,4 @@
-import { stripPx } from "./strip-px";
+import { stripPx } from "./strip-unit";
 
 describe("stripPx", () => {
   it("should return number", () => {

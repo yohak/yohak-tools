@@ -6,7 +6,13 @@ export { SingleOrArray } from "./array/types";
 export { getComputedStyleValue } from "./css/get-computed-style";
 export { getStyle } from "./css/get-style";
 export { setStyle } from "./css/set-style";
-export { stripPx } from "./css/strip-px";
+export {
+  stripUnit,
+  stripPx,
+  stripVw,
+  stripVh,
+  stripPercent,
+} from "./css/strip-unit";
 export { NumberOrString, CSSStyles, CSSProps } from "./css/types";
 //
 export { addClass } from "./dom/add-class";

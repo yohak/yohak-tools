@@ -25,12 +25,23 @@ export type PositionValue =
   | "inherit"
   | "unset";
 export type PointerEventsValue = "auto" | "none" | "inherit" | "unset";
+export type OverflowValue =
+  | "visible"
+  | "hidden"
+  | "clip"
+  | "scroll"
+  | "auto"
+  | "inherit"
+  | "unset";
 
 export type ValueOverRide = {
   display: DisplayValue;
   visibility: VisibilityValue;
   position: PositionValue;
   pointerEvents: PointerEventsValue;
+  overflow: OverflowValue;
+  overflowX: OverflowValue;
+  overflowY: OverflowValue;
 };
 export const numberProps = ["opacity", "zIndex", "lineHeight"] as const;
 export const numberToPxProps = [

@@ -1,4 +1,3 @@
-import { stripPx } from "./strip-px";
 import { extractCurrentTransform, isTransformProp } from "./utils";
 import {
   CSSProps,
@@ -9,6 +8,7 @@ import {
   TransformKeys,
   VisibilityValue,
 } from "./types";
+import { stripPx } from "./strip-unit";
 
 export function getStyle(
   target: HTMLElement,
