@@ -14,6 +14,7 @@ export {
   stripPercent,
 } from "./css/strip-unit";
 export { NumberOrString, CSSStyles, CSSProps } from "./css/types";
+export { vwToPx, vhToPx, pxToVw, pxToVh } from "./css/convert-unit";
 //
 export { addClass } from "./dom/add-class";
 export { addClassIf } from "./dom/add-class-if";
