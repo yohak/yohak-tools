@@ -2,7 +2,7 @@
   "name": "yohak-tools",
   "version": "0.1.2",
   "description": "Utility functions working at YOHAK LLC",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "test": "jest"
