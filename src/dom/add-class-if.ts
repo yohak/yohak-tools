@@ -27,8 +27,7 @@ const process = (
   remove: boolean = true,
   alt: string = ""
 ) => {
-  const c: boolean =
-    typeof condition === "function" ? condition(target) : condition;
+  const c: boolean = typeof condition === "function" ? condition(target) : condition;
 
   if (c) {
     addClass(target, token);

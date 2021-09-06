@@ -9,10 +9,7 @@ import {
 import { extractCurrentTransform, isPxProp, isTransformProp } from "./utils";
 import { SingleOrArray } from "../array/types";
 
-export const setStyle = (
-  target: SingleOrArray<HTMLElement>,
-  styles: CSSStyles
-) => {
+export const setStyle = (target: SingleOrArray<HTMLElement>, styles: CSSStyles) => {
   forceAsArray(target).forEach((elm) => _setStyle(elm, styles));
 };
 const _setStyle = (target: HTMLElement, styles: CSSStyles) => {

@@ -1,8 +1,4 @@
-import {
-  numberToPxProps,
-  TransformObject,
-  transformSingleProps,
-} from "./types";
+import { numberToPxProps, TransformObject, transformSingleProps } from "./types";
 
 export const extractCurrentTransform = (str: string): TransformObject => {
   const result: TransformObject = {};

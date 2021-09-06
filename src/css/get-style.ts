@@ -10,18 +10,9 @@ import {
 } from "./types";
 import { stripPx } from "./strip-unit";
 
-export function getStyle(
-  target: HTMLElement,
-  prop: "display"
-): DisplayValue | undefined;
-export function getStyle(
-  target: HTMLElement,
-  prop: "visibility"
-): VisibilityValue | undefined;
-export function getStyle(
-  target: HTMLElement,
-  prop: "position"
-): PositionValue | undefined;
+export function getStyle(target: HTMLElement, prop: "display"): DisplayValue | undefined;
+export function getStyle(target: HTMLElement, prop: "visibility"): VisibilityValue | undefined;
+export function getStyle(target: HTMLElement, prop: "position"): PositionValue | undefined;
 export function getStyle(
   target: HTMLElement,
   prop: "pointerEvents"

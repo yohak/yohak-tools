@@ -10,12 +10,7 @@ export type DisplayValue =
   | "none"
   | "inherit"
   | "unset";
-export type VisibilityValue =
-  | "visible"
-  | "hidden"
-  | "collapse"
-  | "inherit"
-  | "unset";
+export type VisibilityValue = "visible" | "hidden" | "collapse" | "inherit" | "unset";
 export type PositionValue =
   | "static"
   | "relative"
@@ -25,14 +20,7 @@ export type PositionValue =
   | "inherit"
   | "unset";
 export type PointerEventsValue = "auto" | "none" | "inherit" | "unset";
-export type OverflowValue =
-  | "visible"
-  | "hidden"
-  | "clip"
-  | "scroll"
-  | "auto"
-  | "inherit"
-  | "unset";
+export type OverflowValue = "visible" | "hidden" | "clip" | "scroll" | "auto" | "inherit" | "unset";
 
 export type ValueOverRide = {
   display: DisplayValue;
@@ -79,16 +67,11 @@ export type NumberKeys = typeof numberProps[number];
 export type NumberToPxKeys = typeof numberToPxProps[number];
 export type TransformKeys = typeof transformSingleProps[number];
 export type OmitKeys = NumberKeys | NumberToPxKeys | "rotate";
-export type AcceptsNumberObject = Record<
-  NumberToPxKeys | TransformKeys | OmitKeys,
-  NumberOrString
->;
+export type AcceptsNumberObject = Record<NumberToPxKeys | TransformKeys | OmitKeys, NumberOrString>;
 
 export type TransformObject = Partial<Record<TransformKeys, NumberOrString>>;
 
-type WholeCSSStyles = Omit<CSSStyleDeclaration, OmitKeys> &
-  ValueOverRide &
-  AcceptsNumberObject;
+type WholeCSSStyles = Omit<CSSStyleDeclaration, OmitKeys> & ValueOverRide & AcceptsNumberObject;
 export type CSSStyles = Partial<WholeCSSStyles>;
 
 export type CSSProps = keyof WholeCSSStyles;

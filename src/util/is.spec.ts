@@ -1,11 +1,4 @@
-import {
-  isArray,
-  isBoolean,
-  isFunction,
-  isNumber,
-  isString,
-  isValidNumber,
-} from "./is";
+import { isArray, isBoolean, isFunction, isNumber, isString, isValidNumber } from "./is";
 
 describe("isNumber", () => {
   it("should work", () => {

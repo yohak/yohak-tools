@@ -15,13 +15,7 @@ describe("removeClass", () => {
   });
   it("should accept multiple objects", () => {
     const targets = qsa("li");
-    expect(targets.map((elm) => hasClass(elm, "moge"))).toEqual([
-      true,
-      false,
-      false,
-      true,
-      false,
-    ]);
+    expect(targets.map((elm) => hasClass(elm, "moge"))).toEqual([true, false, false, true, false]);
     removeClass(targets, "moge");
     expect(targets.map((elm) => hasClass(elm, "moge"))).toEqual([
       false,

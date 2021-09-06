@@ -1,11 +1,7 @@
 // https://stackoverflow.com/questions/211703/is-it-possible-to-get-the-position-of-div-within-the-browser-viewport-not-withi
 
 import { Point } from "../geom/types";
-import {
-  getDocumentScroll,
-  getDocumentScrollX,
-  getDocumentScrollY,
-} from "./get-document-scroll";
+import { getDocumentScroll, getDocumentScrollX, getDocumentScrollY } from "./get-document-scroll";
 
 export const getOffsetFromViewport = (target: HTMLElement): Point => {
   const offset = { x: 0, y: 0 };

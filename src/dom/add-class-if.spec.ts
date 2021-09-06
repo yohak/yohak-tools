@@ -17,21 +17,11 @@ describe("addClassIf", () => {
   });
   it("should accept function as condition", () => {
     const targets = qsa("li");
-    addClassIf(
-      targets,
-      (target) => target.textContent === "2",
-      "found",
-      "not-found"
-    );
+    addClassIf(targets, (target) => target.textContent === "2", "found", "not-found");
     expect(hasClass(targets[0], "not-found")).toBeTruthy();
     expect(hasClass(targets[1], "found")).toBeTruthy();
     expect(hasClass(targets[2], "not-found")).toBeTruthy();
-    addClassIf(
-      targets,
-      (target) => target.textContent === "1",
-      "found",
-      "not-found"
-    );
+    addClassIf(targets, (target) => target.textContent === "1", "found", "not-found");
     expect(hasClass(targets[0], "not-found")).toBeFalsy();
     expect(hasClass(targets[0], "found")).toBeTruthy();
   });
