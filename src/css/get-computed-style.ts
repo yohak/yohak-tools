@@ -3,10 +3,7 @@ import { paramCase, snakeCase } from "change-case";
 import { extractCurrentTransform, isTransformProp } from "./utils";
 import { stripPx } from "./strip-unit";
 
-export function getComputedStyleValue(
-  elm: HTMLElement,
-  key: CSSProps
-): NumberOrString {
+export function getComputedStyleValue(elm: HTMLElement, key: CSSProps): NumberOrString | undefined {
   const computed = window.getComputedStyle(elm);
   if (isTransformProp(key as string)) {
     const str = computed.getPropertyValue("transform");

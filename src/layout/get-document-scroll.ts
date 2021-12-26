@@ -10,15 +10,7 @@ export const getDocumentScroll = (): Point => {
 };
 
 export const getDocumentScrollX = (): number =>
-  Math.max(
-    window.pageXOffset,
-    document.documentElement.scrollLeft,
-    document.body.scrollLeft
-  );
+  Math.max(window.pageXOffset, document.documentElement.scrollLeft, document.body.scrollLeft);
 
 export const getDocumentScrollY = (): number =>
-  Math.max(
-    window.pageYOffset,
-    document.documentElement.scrollTop,
-    document.body.scrollTop
-  );
+  Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);

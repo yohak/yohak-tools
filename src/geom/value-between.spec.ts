@@ -17,11 +17,11 @@ describe("valueBetween", () => {
     const result = valueBetween(100, 200, -1);
     expect(result).toBe(0);
   });
-  it("should camp overshoot value", () => {
+  it("should clamp overshoot value", () => {
     const result = valueBetween(100, 200, 2, true);
     expect(result).toBe(200);
   });
-  it("should camp negative overshoot value", () => {
+  it("should clamp negative overshoot value", () => {
     const result = valueBetween(100, 200, -1, true);
     expect(result).toBe(100);
   });

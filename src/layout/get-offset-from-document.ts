@@ -1,8 +1,4 @@
-import {
-  getDocumentScroll,
-  getDocumentScrollX,
-  getDocumentScrollY,
-} from "./get-document-scroll";
+import { getDocumentScroll, getDocumentScrollX, getDocumentScrollY } from "./get-document-scroll";
 import { Point } from "../geom/types";
 
 export const getOffsetFromDocument = (target: HTMLElement): Point => {
