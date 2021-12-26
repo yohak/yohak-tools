@@ -1,11 +1,5 @@
 import { forceAsArray } from "../array/force-as-array";
-import {
-  CSSStyles,
-  NumberOrString,
-  numberToPxProps,
-  TransformObject,
-  transformSingleProps,
-} from "./types";
+import { CSSStyles, NumberOrString, TransformObject } from "./types";
 import { extractCurrentTransform, isPxProp, isTransformProp } from "./utils";
 import { SingleOrArray } from "../array/types";
 
@@ -79,9 +73,9 @@ const setTransformProps = (target: HTMLElement, next: TransformObject) => {
 };
 
 const chooseValue = (
-  newValue: NumberOrString,
-  currentValue: NumberOrString,
-  defaultValue: string = "0"
+  newValue: NumberOrString | undefined,
+  currentValue: NumberOrString | undefined,
+  defaultValue: string = "0",
 ): NumberOrString => {
   if (newValue !== undefined) {
     return newValue;
@@ -94,9 +88,7 @@ const chooseValue = (
 
 const hasTranslateValue = (transforms: TransformObject): boolean => {
   return (
-    transforms.translateX !== undefined ||
-    transforms.translateY !== undefined ||
-    transforms.translateZ !== undefined
+    transforms.translateX !== undefined || transforms.translateY !== undefined || transforms.translateZ !== undefined
   );
 };
 const hasRotateValue = (transforms: TransformObject): boolean => {

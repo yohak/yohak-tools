@@ -11,7 +11,7 @@ export const addClassIf = (
   condition: boolean | BooleanFunc,
   token: string,
   alt: string = "",
-  remove: boolean = true
+  remove: boolean = true,
 ): void => {
   if (target instanceof NodeList) {
     target = nodeListToArray(target);
@@ -25,7 +25,7 @@ const process = (
   condition: boolean | BooleanFunc,
   token: string,
   remove: boolean = true,
-  alt: string = ""
+  alt: string = "",
 ) => {
   const c: boolean = typeof condition === "function" ? condition(target) : condition;
 

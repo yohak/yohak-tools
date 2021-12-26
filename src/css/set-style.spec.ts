@@ -45,9 +45,7 @@ describe("setClass", () => {
         rotate: 45,
         skewX: 45,
       });
-      expect(section.style.transform).toBe(
-        "translate3d(20px, 10px, 0) rotate(45deg) scale(0.5, 1) skew(45deg, 0)"
-      );
+      expect(section.style.transform).toBe("translate3d(20px, 10px, 0) rotate(45deg) scale(0.5, 1) skew(45deg, 0)");
     });
     it("should respect current value", () => {
       setStyle(section, { translateX: 20 });
@@ -55,12 +53,10 @@ describe("setClass", () => {
       setStyle(section, { translateY: 20 });
       expect(section.style.transform).toBe("translate3d(20px, 20px, 0)");
       setStyle(section, { translateX: 50, scaleX: 1.5, rotate: 20, skewY: 15 });
-      expect(section.style.transform).toBe(
-        "translate3d(50px, 20px, 0) rotate(20deg) scale(1.5, 1) skew(0, 15deg)"
-      );
+      expect(section.style.transform).toBe("translate3d(50px, 20px, 0) rotate(20deg) scale(1.5, 1) skew(0, 15deg)");
       setStyle(section, { translateZ: -15, scaleY: 3, skewX: "30rad" });
       expect(section.style.transform).toBe(
-        "translate3d(50px, 20px, -15px) rotate(20deg) scale(1.5, 3) skew(30rad, 15deg)"
+        "translate3d(50px, 20px, -15px) rotate(20deg) scale(1.5, 3) skew(30rad, 15deg)",
       );
     });
   });

@@ -16,6 +16,7 @@ describe("getStyle", () => {
       opacity: 1,
     });
   });
+
   it("should work", () => {
     const result = getStyle(section, "display");
     expect(result).toBe("flex");

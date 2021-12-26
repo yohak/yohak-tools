@@ -24,7 +24,6 @@ describe("getComputedStyle", () => {
     expect(result).toBe("50%");
   });
 });
-
 const fixture = `
   <style rel="stylesheet">
     section{

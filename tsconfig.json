@@ -16,7 +16,8 @@
     "noImplicitUseStrict": false,
     "noFallthroughCasesInSwitch": true,
     "typeRoots": ["./node_modules/@types"],
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "strict": true
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules"],
