@@ -1,7 +1,7 @@
-import { qs } from "./qs";
 import { hasClass } from "./has-class";
-import { removeClass } from "./remove-class";
+import { qs } from "./qs";
 import { qsa } from "./qsa";
+import { removeClass } from "./remove-class";
 
 describe("removeClass", () => {
   beforeEach(() => {
@@ -17,7 +17,13 @@ describe("removeClass", () => {
     const targets = qsa("li");
     expect(targets.map((elm) => hasClass(elm, "moge"))).toEqual([true, false, false, true, false]);
     removeClass(targets, "moge");
-    expect(targets.map((elm) => hasClass(elm, "moge"))).toEqual([false, false, false, false, false]);
+    expect(targets.map((elm) => hasClass(elm, "moge"))).toEqual([
+      false,
+      false,
+      false,
+      false,
+      false,
+    ]);
   });
 });
 const fixture = `

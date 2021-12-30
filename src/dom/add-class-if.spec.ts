@@ -1,6 +1,6 @@
-import { qs } from "./qs";
-import { hasClass } from "./has-class";
 import { addClassIf } from "./add-class-if";
+import { hasClass } from "./has-class";
+import { qs } from "./qs";
 import { qsa } from "./qsa";
 
 describe("addClassIf", () => {

@@ -1,10 +1,13 @@
-import { NumberOrString } from "./types";
 import { stripPx, stripVw } from "./strip-unit";
+import { NumberOrString } from "./types";
 
 export function pxToVw(value: NumberOrString, addUnit: true): string | undefined;
 export function pxToVw(value: NumberOrString, addUnit: false): number | undefined;
 export function pxToVw(value: NumberOrString): number | undefined;
-export function pxToVw(value: NumberOrString, addUnit: boolean = false): NumberOrString | undefined {
+export function pxToVw(
+  value: NumberOrString,
+  addUnit: boolean = false,
+): NumberOrString | undefined {
   const px: number | undefined = typeof value === "string" ? stripPx(value) : value;
   if (px === undefined) return undefined;
   //
@@ -15,7 +18,10 @@ export function pxToVw(value: NumberOrString, addUnit: boolean = false): NumberO
 export function pxToVh(value: NumberOrString, addUnit: true): string | undefined;
 export function pxToVh(value: NumberOrString, addUnit: false): number | undefined;
 export function pxToVh(value: NumberOrString): number | undefined;
-export function pxToVh(value: NumberOrString, addUnit: boolean = false): NumberOrString | undefined {
+export function pxToVh(
+  value: NumberOrString,
+  addUnit: boolean = false,
+): NumberOrString | undefined {
   const px: number | undefined = typeof value === "string" ? stripPx(value) : value;
   if (px === undefined) return undefined;
   //

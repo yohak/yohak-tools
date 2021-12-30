@@ -1,6 +1,6 @@
-import { qs } from "./qs";
-import { hasClass } from "./has-class";
 import { addClass } from "./add-class";
+import { hasClass } from "./has-class";
+import { qs } from "./qs";
 
 describe("has-class", () => {
   beforeEach(() => {

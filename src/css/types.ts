@@ -11,7 +11,14 @@ export type DisplayValue =
   | "inherit"
   | "unset";
 export type VisibilityValue = "visible" | "hidden" | "collapse" | "inherit" | "unset";
-export type PositionValue = "static" | "relative" | "absolute" | "fixed" | "sticky" | "inherit" | "unset";
+export type PositionValue =
+  | "static"
+  | "relative"
+  | "absolute"
+  | "fixed"
+  | "sticky"
+  | "inherit"
+  | "unset";
 export type PointerEventsValue = "auto" | "none" | "inherit" | "unset";
 export type OverflowValue = "visible" | "hidden" | "clip" | "scroll" | "auto" | "inherit" | "unset";
 

@@ -1,6 +1,6 @@
-import { qs } from "../dom/qs";
-import { setStyle } from "./set-style";
 import { getStyle } from "./get-style";
+import { setStyle } from "./set-style";
+import { qs } from "../dom/qs";
 
 describe("getStyle", () => {
   let section: HTMLElement;

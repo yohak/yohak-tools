@@ -1,7 +1,7 @@
-import { CSSProps, NumberOrString, TransformKeys } from "./types";
-import { paramCase, snakeCase } from "change-case";
-import { extractCurrentTransform, isTransformProp } from "./utils";
+import { paramCase } from "change-case";
 import { stripPx } from "./strip-unit";
+import { CSSProps, NumberOrString, TransformKeys } from "./types";
+import { extractCurrentTransform, isTransformProp } from "./utils";
 
 export function getComputedStyleValue(elm: HTMLElement, key: CSSProps): NumberOrString | undefined {
   const computed = window.getComputedStyle(elm);

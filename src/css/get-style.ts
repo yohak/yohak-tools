@@ -1,4 +1,4 @@
-import { extractCurrentTransform, isTransformProp } from "./utils";
+import { stripPx } from "./strip-unit";
 import {
   CSSProps,
   DisplayValue,
@@ -8,12 +8,15 @@ import {
   TransformKeys,
   VisibilityValue,
 } from "./types";
-import { stripPx } from "./strip-unit";
+import { extractCurrentTransform, isTransformProp } from "./utils";
 
 export function getStyle(target: HTMLElement, prop: "display"): DisplayValue | undefined;
 export function getStyle(target: HTMLElement, prop: "visibility"): VisibilityValue | undefined;
 export function getStyle(target: HTMLElement, prop: "position"): PositionValue | undefined;
-export function getStyle(target: HTMLElement, prop: "pointerEvents"): PointerEventsValue | undefined;
+export function getStyle(
+  target: HTMLElement,
+  prop: "pointerEvents",
+): PointerEventsValue | undefined;
 export function getStyle(target: HTMLElement, prop: CSSProps): NumberOrString | undefined;
 export function getStyle(target: HTMLElement, prop: CSSProps): NumberOrString | undefined {
   let result: string;

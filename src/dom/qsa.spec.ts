@@ -1,5 +1,5 @@
-import { qsa } from "./qsa";
 import { qs } from "./qs";
+import { qsa } from "./qsa";
 
 describe("qsa", () => {
   it("should return as an array", () => {

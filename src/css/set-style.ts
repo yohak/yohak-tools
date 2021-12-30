@@ -1,6 +1,6 @@
-import { forceAsArray } from "../array/force-as-array";
 import { CSSStyles, NumberOrString, TransformObject } from "./types";
 import { extractCurrentTransform, isPxProp, isTransformProp } from "./utils";
+import { forceAsArray } from "../array/force-as-array";
 import { SingleOrArray } from "../array/types";
 
 export const setStyle = (target: SingleOrArray<HTMLElement>, styles: CSSStyles) => {
@@ -88,7 +88,9 @@ const chooseValue = (
 
 const hasTranslateValue = (transforms: TransformObject): boolean => {
   return (
-    transforms.translateX !== undefined || transforms.translateY !== undefined || transforms.translateZ !== undefined
+    transforms.translateX !== undefined ||
+    transforms.translateY !== undefined ||
+    transforms.translateZ !== undefined
   );
 };
 const hasRotateValue = (transforms: TransformObject): boolean => {

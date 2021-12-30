@@ -1,6 +1,6 @@
+import { hasClass } from "./has-class";
 import { qs } from "./qs";
 import { toggleClass } from "./toggle-class";
-import { hasClass } from "./has-class";
 
 describe("toggleClass", () => {
   beforeEach(() => {
