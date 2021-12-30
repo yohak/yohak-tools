@@ -2,6 +2,7 @@ import { CSSStyles, NumberOrString, TransformObject } from "./types";
 import { extractCurrentTransform, isPxProp, isTransformProp } from "./utils";
 import { forceAsArray } from "../array/force-as-array";
 import { SingleOrArray } from "../array/types";
+import { Optional } from "../index";
 
 export const setStyle = (target: SingleOrArray<HTMLElement>, styles: CSSStyles) => {
   forceAsArray(target).forEach((elm) => _setStyle(elm, styles));
@@ -73,8 +74,8 @@ const setTransformProps = (target: HTMLElement, next: TransformObject) => {
 };
 
 const chooseValue = (
-  newValue: NumberOrString | undefined,
-  currentValue: NumberOrString | undefined,
+  newValue: Optional<NumberOrString>,
+  currentValue: Optional<NumberOrString>,
   defaultValue: string = "0",
 ): NumberOrString => {
   if (newValue !== undefined) {

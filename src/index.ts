@@ -1,4 +1,7 @@
 //
+export type Nullable<T> = T | null;
+export type Optional<T> = T | undefined;
+//
 export { circulate } from "./array/circulate";
 export { forceAsArray } from "./array/force-as-array";
 export { SingleOrArray } from "./array/types";
