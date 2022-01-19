@@ -1,4 +1,5 @@
 import { isArray, isBoolean, isFunction, isNumber, isString, isValidNumber } from "./is";
+import { Nullable } from "../index";
 
 describe("isNumber", () => {
   it("should work", () => {
@@ -8,6 +9,18 @@ describe("isNumber", () => {
     expect(isNumber("abc")).toBe(false);
     expect(isNumber(null)).toBe(false);
     expect(isNumber(undefined)).toBe(false);
+  });
+  it("should pass type check", () => {
+    const setNumberOrNull = (): Nullable<number> => {
+      return Math.random() < 0.5 ? 1 : null;
+    };
+    const value = setNumberOrNull();
+    if (isNumber(value)) {
+      const result = Math.abs(value);
+      expect(result).toBeTruthy();
+    } else {
+      expect(value).toBe(null);
+    }
   });
 });
 describe("isValidNumber", () => {
@@ -19,6 +32,18 @@ describe("isValidNumber", () => {
     expect(isValidNumber(null)).toBe(false);
     expect(isValidNumber(undefined)).toBe(false);
   });
+  it("should pass type check", () => {
+    const setNumberOrNull = (): Nullable<number> => {
+      return Math.random() < 0.5 ? 1 : null;
+    };
+    const value = setNumberOrNull();
+    if (isValidNumber(value)) {
+      const result = Math.abs(value);
+      expect(result).toBeTruthy();
+    } else {
+      expect(value).toBe(null);
+    }
+  });
 });
 describe("isString", () => {
   it("should work", () => {
@@ -28,6 +53,19 @@ describe("isString", () => {
     expect(isString(0)).toBe(false);
     expect(isString(null)).toBe(false);
     expect(isString(undefined)).toBe(false);
+    expect(isString(true)).toBe(false);
+  });
+  it("should pass type check", () => {
+    const setStringOrNull = (): Nullable<string> => {
+      return Math.random() < 0.5 ? "abc" : null;
+    };
+    const value = setStringOrNull();
+    if (isString(value)) {
+      const result = value.split(",");
+      expect(result).toBeTruthy();
+    } else {
+      expect(value).toBe(null);
+    }
   });
 });
 describe("isBoolean", () => {
@@ -39,6 +77,19 @@ describe("isBoolean", () => {
     expect(isBoolean(null)).toBe(false);
     expect(isBoolean(undefined)).toBe(false);
   });
+  it("should pass type check", () => {
+    const setBoolOrNull = (): Nullable<boolean> => {
+      return Math.random() < 0.5 ? true : null;
+    };
+    const receiveBoolen = (bool: boolean) => (bool ? "abc" : "def");
+    const value = setBoolOrNull();
+    if (isBoolean(value)) {
+      const result = receiveBoolen(value);
+      expect(result).toBeTruthy();
+    } else {
+      expect(value).toBe(null);
+    }
+  });
 });
 describe("isFunction", () => {
   it("should work", () => {
@@ -48,6 +99,20 @@ describe("isFunction", () => {
     expect(isFunction(null)).toBe(false);
     expect(isFunction(undefined)).toBe(false);
   });
+
+  it("should pass type check", () => {
+    // eslint-disable-next-line @typescript-eslint/ban-types
+    const setFuncOrNull = (): Nullable<Function> => {
+      return Math.random() < 0.5 ? () => "abc" : null;
+    };
+    const value = setFuncOrNull();
+    if (isFunction(value)) {
+      const result = value.call(this, []);
+      expect(result).toBeTruthy();
+    } else {
+      expect(value).toBe(null);
+    }
+  });
 });
 describe("isArray", () => {
   it("should work", () => {
@@ -56,5 +121,18 @@ describe("isArray", () => {
     expect(isArray(0)).toBe(false);
     expect(isArray(undefined)).toBe(false);
     expect(isArray(null)).toBe(false);
+  });
+
+  it("should pass type check", () => {
+    const setArrayOrNull = (): Nullable<Date[]> => {
+      return Math.random() < 0.5 ? [new Date()] : null;
+    };
+    const value = setArrayOrNull();
+    if (isArray(value)) {
+      const result = value.map((item) => item.getDay());
+      expect(result).toBeTruthy();
+    } else {
+      expect(value).toBe(null);
+    }
   });
 });
