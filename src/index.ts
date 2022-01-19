@@ -2,41 +2,31 @@
 export type Nullable<T> = T | null;
 export type Optional<T> = T | undefined;
 //
-export { circulate } from "./array/circulate";
-export { forceAsArray } from "./array/force-as-array";
-export { SingleOrArray } from "./array/types";
+export * from "./array/circulate";
+export * from "./array/force-as-array";
+export * from "./array/types";
 //
-export { getComputedStyleValue } from "./css/get-computed-style";
-export { getStyle } from "./css/get-style";
-export { setStyle } from "./css/set-style";
-export { stripUnit, stripPx, stripVw, stripVh, stripPercent } from "./css/strip-unit";
-export { NumberOrString, CSSStyles, CSSProps } from "./css/types";
-export { vwToPx, vhToPx, pxToVw, pxToVh } from "./css/convert-unit";
+export * from "./css/get-computed-style";
+export * from "./css/get-style";
+export * from "./css/set-style";
+export * from "./css/strip-unit";
+export * from "./css/types";
+export * from "./css/convert-unit";
 //
-export { addClass } from "./dom/add-class";
-export { addClassIf } from "./dom/add-class-if";
-export { hasClass } from "./dom/has-class";
-export { qs } from "./dom/qs";
-export { qsa } from "./dom/qsa";
-export { removeClass } from "./dom/remove-class";
-export { toggleClass } from "./dom/toggle-class";
+export * from "./dom/add-class";
+export * from "./dom/add-class-if";
+export * from "./dom/has-class";
+export * from "./dom/qs";
+export * from "./dom/qsa";
+export * from "./dom/remove-class";
+export * from "./dom/toggle-class";
 //
-export { rangeMap } from "./geom/range-map";
-export { Point, NumberRange } from "./geom/types";
+export * from "./geom/range-map";
+export * from "./geom/types";
 //
-export {
-  getDocumentScroll,
-  getDocumentScrollX,
-  getDocumentScrollY,
-} from "./layout/get-document-scroll";
-export {
-  getOffsetFromDocument,
-  getOffsetXFromDocument,
-  getOffsetYFromDocument,
-} from "./layout/get-offset-from-document";
-export {
-  getOffsetFromViewport,
-  getOffsetXFromViewport,
-  getOffsetYFromViewport,
-} from "./layout/get-offset-from-viewport";
+export * from "./layout/get-document-scroll";
+export * from "./layout/get-offset-from-document";
+export * from "./layout/get-offset-from-viewport";
+//
+export * from "./util/is";
 //
