@@ -2,12 +2,11 @@
   "name": "yohak-tools",
   "version": "0.1.14",
   "description": "Utility functions working at YOHAK LLC",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "pre-publish": "tsc && npm version patch",
-    "publish": "npm publish"
+    "pre-publish": "tsc && npm version patch"
   },
   "repository": "https://github.com/yohak/yohak-tools",
   "author": "Satoshi Onoda",
