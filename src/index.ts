@@ -30,3 +30,4 @@ export * from "./layout/get-offset-from-viewport";
 //
 export * from "./util/is";
 //
+export * from "./types/react";
