@@ -12,6 +12,7 @@
   "author": "Satoshi Onoda",
   "license": "MIT",
   "devDependencies": {
+    "@emotion/react": "^11.7.1",
     "@emotion/utils": "^1.0.0",
     "@types/jest": "^26.0.24",
     "@typescript-eslint/eslint-plugin": "^4.28.3",
