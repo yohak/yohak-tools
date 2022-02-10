@@ -4,6 +4,7 @@ export type Optional<T> = T | undefined;
 //
 export * from "./array/circulate";
 export * from "./array/force-as-array";
+export * from "./array/shuffle";
 export * from "./array/types";
 //
 export * from "./css/get-computed-style";
