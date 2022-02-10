@@ -7,7 +7,7 @@ describe("toggleClass", () => {
     document.body.innerHTML = fixture;
   });
   it("should work", () => {
-    const target = qs("div.wrapper");
+    const target = qs("div.wrapper")!;
     expect(hasClass(target, "wrapper")).toBeTruthy();
     toggleClass(target, "wrapper");
     expect(hasClass(target, "wrapper")).toBeFalsy();

@@ -7,7 +7,7 @@ describe("has-class", () => {
     document.body.innerHTML = fixture;
   });
   it("should work", () => {
-    const target = qs("div");
+    const target = qs("div")!;
     expect(hasClass(target, "foo")).toBeFalsy();
     addClass(target, "foo");
     expect(hasClass(target, "foo")).toBeTruthy();

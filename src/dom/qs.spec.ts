@@ -5,7 +5,7 @@ describe("qs", () => {
     document.body.innerHTML = `
     <div class="foo">FOO</div>
     `;
-    const result = qs(".foo");
+    const result = qs(".foo")!;
     expect(result.textContent).toBe("FOO");
   });
   it("should respect query root", () => {
@@ -17,10 +17,10 @@ describe("qs", () => {
         <p>this is second's child</p> 
       </div>
     `;
-    const result1 = qs("p");
+    const result1 = qs("p")!;
     expect(result1.textContent).toBe("this is first's child");
-    const target = qs("#second");
-    const result2 = qs("p", target);
+    const target = qs("#second")!;
+    const result2 = qs("p", target)!;
     expect(result2.textContent).toBe("this is second's child");
   });
 });

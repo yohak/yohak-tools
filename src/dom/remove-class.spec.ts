@@ -8,7 +8,7 @@ describe("removeClass", () => {
     document.body.innerHTML = fixture;
   });
   it("should work", () => {
-    const target = qs("div");
+    const target = qs("div")!;
     expect(hasClass(target, "hoge")).toBeTruthy();
     removeClass(target, "hoge");
     expect(hasClass(target, "hoge")).toBeFalsy();

@@ -8,12 +8,12 @@ describe("addClass", () => {
     document.body.innerHTML = fixture;
   });
   it("should work", () => {
-    const target = qs("div");
+    const target = qs("div")!;
     addClass(target, "foo");
     expect(hasClass(target, "foo")).toBeTruthy();
   });
   it("should add multiple classes", () => {
-    const target = qs("div");
+    const target = qs("div")!;
     expect(hasClass(target, "foo")).toBeFalsy();
     expect(hasClass(target, "bar")).toBeFalsy();
     addClass(target, ["foo", "bar"]);

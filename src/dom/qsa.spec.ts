@@ -30,7 +30,7 @@ describe("qsa", () => {
     `;
     const result1 = qsa("li");
     expect(result1.length).toBe(7);
-    const target = qs("#second");
+    const target = qs("#second")!;
     const result2 = qsa("li", target);
     expect(result2.length).toBe(4);
   });

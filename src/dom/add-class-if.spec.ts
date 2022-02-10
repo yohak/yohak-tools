@@ -8,7 +8,7 @@ describe("addClassIf", () => {
     document.body.innerHTML = fixture;
   });
   it("should work", () => {
-    const target = qs("div");
+    const target = qs("div")!;
     expect(hasClass(target, "foo")).toBeFalsy();
     addClassIf(target, false, "foo");
     expect(hasClass(target, "foo")).toBeFalsy();
