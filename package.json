@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "pre-publish": "tsc && npm version patch"
+    "pre-publish": "tsc && npm version patch",
+    "publish": "npm publish"
   },
   "repository": "https://github.com/yohak/yohak-tools",
   "author": "Satoshi Onoda",
