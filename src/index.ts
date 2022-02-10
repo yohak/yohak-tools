@@ -30,4 +30,5 @@ export * from "./layout/get-offset-from-viewport";
 //
 export * from "./util/is";
 export * from "./util/Emotion";
+export * from "./util/promise";
 //
