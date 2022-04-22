@@ -1,6 +1,6 @@
 {
   "name": "yohak-tools",
-  "version": "0.1.25",
+  "version": "0.2.0",
   "description": "Utility functions working at YOHAK LLC",
   "main": "dist/index.js",
   "scripts": {
@@ -27,10 +27,6 @@
     "typescript": "^4.3.5"
   },
   "dependencies": {
-    "change-case": "^4.1.2",
-    "@emotion/core": "^11.0.0",
-    "@emotion/react": "^11.7.1",
-    "@emotion/utils": "^1.0.0",
-    "react": "^17.0.2"
+    "change-case": "^4.1.2"
   }
 }
