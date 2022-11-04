@@ -21,6 +21,7 @@ export * from "./dom/qs";
 export * from "./dom/qsa";
 export * from "./dom/remove-class";
 export * from "./dom/toggle-class";
+export * from "./dom/find";
 //
 export * from "./geom/range-map";
 export * from "./geom/types";
