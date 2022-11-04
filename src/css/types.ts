@@ -75,3 +75,5 @@ type WholeCSSStyles = Omit<CSSStyleDeclaration, OmitKeys> & ValueOverRide & Acce
 export type CSSStyles = Partial<WholeCSSStyles>;
 
 export type CSSProps = keyof WholeCSSStyles;
+
+export type StylableElement = HTMLElement | SVGElement;

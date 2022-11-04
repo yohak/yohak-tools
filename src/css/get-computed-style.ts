@@ -1,10 +1,13 @@
 import { paramCase } from "change-case";
 import { stripPx } from "./strip-unit";
-import { CSSProps, NumberOrString, TransformKeys } from "./types";
+import { CSSProps, NumberOrString, StylableElement, TransformKeys } from "./types";
 import { extractCurrentTransform, isTransformProp } from "./utils";
 import { Optional } from "../index";
 
-export function getComputedStyleValue(elm: HTMLElement, key: CSSProps): Optional<NumberOrString> {
+export function getComputedStyleValue(
+  elm: StylableElement,
+  key: CSSProps,
+): Optional<NumberOrString> {
   const computed = window.getComputedStyle(elm);
   if (isTransformProp(key as string)) {
     const str = computed.getPropertyValue("transform");

@@ -1,8 +1,9 @@
 import { paramCase, pascalCase, snakeCase } from "change-case";
 import { qs } from "./qs";
 import { qsa } from "./qsa";
+import { StylableElement } from "../css/types";
 
-export const findByDataSet = <T extends Element | null>(
+export const findByDataSet = <T extends StylableElement | null>(
   key: string,
   dataSetKey = "js-target",
   parent: ParentNode = document,
@@ -10,7 +11,7 @@ export const findByDataSet = <T extends Element | null>(
   return qs<T>(`*[data-${paramCase(dataSetKey)}='${key}']`, parent);
 };
 
-export const findMultipleByDataSet = <T extends Element>(
+export const findMultipleByDataSet = <T extends StylableElement>(
   key: string | null,
   dataSetKey = "js-target",
   parent: ParentNode = document,

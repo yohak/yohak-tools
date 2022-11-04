@@ -1,13 +1,13 @@
-import { CSSStyles, NumberOrString, TransformObject } from "./types";
+import { CSSStyles, NumberOrString, StylableElement, TransformObject } from "./types";
 import { extractCurrentTransform, isPxProp, isTransformProp } from "./utils";
 import { forceAsArray } from "../array/force-as-array";
 import { SingleOrArray } from "../array/types";
 import { Optional } from "../index";
 
-export const setStyle = (target: SingleOrArray<HTMLElement>, styles: CSSStyles) => {
+export const setStyle = (target: SingleOrArray<StylableElement>, styles: CSSStyles) => {
   forceAsArray(target).forEach((elm) => _setStyle(elm, styles));
 };
-const _setStyle = (target: HTMLElement, styles: CSSStyles) => {
+const _setStyle = (target: StylableElement, styles: CSSStyles) => {
   const transforms: TransformObject = {};
   try {
     Object.entries(styles).forEach(([key, value]) => {
@@ -37,13 +37,13 @@ const tryAddDeg = (value: NumberOrString): string => {
   return typeof value === "string" ? value : `${value}deg`;
 };
 
-const setDefaultProp = (target: HTMLElement, key: string, value: string) => {
+const setDefaultProp = (target: StylableElement, key: string, value: string) => {
   target.style[key as any] = value;
 };
-const setPxProp = (target: HTMLElement, key: string, value: NumberOrString) => {
+const setPxProp = (target: StylableElement, key: string, value: NumberOrString) => {
   target.style[key as any] = tryAddPx(value);
 };
-const setTransformProps = (target: HTMLElement, next: TransformObject) => {
+const setTransformProps = (target: StylableElement, next: TransformObject) => {
   const values: string[] = [];
   const current = extractCurrentTransform(target.style.transform);
 

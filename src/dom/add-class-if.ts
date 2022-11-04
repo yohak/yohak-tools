@@ -3,11 +3,12 @@ import { nodeListToArray } from "./node-list-to-array";
 import { removeClass } from "./remove-class";
 import { forceAsArray } from "../array/force-as-array";
 import { SingleOrArray } from "../array/types";
+import { StylableElement } from "../css/types";
 
-type BooleanFunc = (t: Element) => boolean;
+type BooleanFunc = (t: StylableElement) => boolean;
 
 export const addClassIf = (
-  target: SingleOrArray<Element> | NodeList,
+  target: SingleOrArray<StylableElement> | NodeList,
   condition: boolean | BooleanFunc,
   token: string,
   alt: string = "",
@@ -21,7 +22,7 @@ export const addClassIf = (
 };
 
 const process = (
-  target: Element,
+  target: StylableElement,
   condition: boolean | BooleanFunc,
   token: string,
   remove: boolean = true,
