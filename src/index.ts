@@ -32,4 +32,6 @@ export * from "./layout/get-offset-from-viewport";
 //
 export * from "./util/is";
 export * from "./util/promise";
+export * from "./util/device";
+export * from "./util/event";
 //
