@@ -6,7 +6,7 @@ describe("setClass", () => {
   let section: HTMLElement;
   beforeEach(() => {
     document.body.innerHTML = fixture;
-    section = qs("section");
+    section = qs("section")!;
   });
   it("should work", () => {
     setStyle(section, { display: "none" });

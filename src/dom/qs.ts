@@ -6,7 +6,7 @@ import { StylableElement } from "../css/types";
 export const qs = <T extends StylableElement | null>(
   query: string,
   queryRoot: ParentNode = document,
-): T => {
+): T | null => {
   const item = queryRoot.querySelector(query);
-  return <T>item;
+  return <T | null>item;
 };

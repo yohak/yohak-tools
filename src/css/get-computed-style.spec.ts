@@ -6,7 +6,7 @@ describe("getComputedStyle", () => {
   let section: HTMLElement;
   beforeEach(() => {
     document.body.innerHTML = fixture;
-    section = qs("section");
+    section = qs("section")!;
     setStyle(section, {
       marginLeft: 20,
     });

@@ -6,7 +6,7 @@ describe("getStyle", () => {
   let section: HTMLElement;
   beforeEach(() => {
     document.body.innerHTML = fixture;
-    section = qs("section");
+    section = qs("section")!;
     setStyle(section, {
       display: "flex",
       marginLeft: 20,

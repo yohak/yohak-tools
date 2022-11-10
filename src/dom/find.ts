@@ -3,11 +3,11 @@ import { qs } from "./qs";
 import { qsa } from "./qsa";
 import { StylableElement } from "../css/types";
 
-export const findByDataSet = <T extends StylableElement | null>(
+export const findByDataSet = <T extends StylableElement>(
   key: string,
   dataSetKey = "js-target",
   parent: ParentNode = document,
-): T => {
+): T | null => {
   return qs<T>(`*[data-${paramCase(dataSetKey)}='${key}']`, parent);
 };
 
