@@ -13,6 +13,10 @@ describe("findByDataSet", () => {
     const result = findByDataSet("myList", "jsTarget")!;
     expect(result.tagName).toBe("UL");
   });
+  it("should find any items with dataset", () => {
+    const result = findByDataSet(null, "jsTarget")!;
+    expect(result.tagName).toBe("UL");
+  });
   it("should return null", () => {
     const result = findByDataSet("myyList")!;
     expect(result).toBe(null);
