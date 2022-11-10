@@ -29,6 +29,7 @@ export * from "./geom/types";
 export * from "./layout/get-document-scroll";
 export * from "./layout/get-offset-from-document";
 export * from "./layout/get-offset-from-viewport";
+export * from "./layout/get-offset-from-target";
 //
 export * from "./util/is";
 export * from "./util/promise";
