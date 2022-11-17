@@ -15,4 +15,9 @@ describe("rangeMap", () => {
     const result = rangeMap([100, -100], [500, 100], 0);
     expect(result).toBe(300);
   });
+
+  it("should work", () => {
+    const result = rangeMap([0, 100], [100, 0], 10);
+    expect(result).toBe(90);
+  });
 });
