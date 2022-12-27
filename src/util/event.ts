@@ -1,5 +1,15 @@
-export const setOnReady = (handler: () => void) => {
+type onReadyOpts = {
+  forceReloadAtHistory?: boolean;
+};
+export const setOnReady = (handler: () => void, opts?: onReadyOpts) => {
   window.addEventListener("DOMContentLoaded", handler);
+  if (opts?.forceReloadAtHistory) {
+    window.addEventListener("pageshow", (e) => {
+      if (e.persisted) {
+        location.reload();
+      }
+    });
+  }
 };
 
 export const setOnLoad = (handler: () => void) => {
