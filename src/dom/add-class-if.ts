@@ -7,6 +7,15 @@ import { StylableElement } from "../css/types";
 
 type BooleanFunc = (t: StylableElement) => boolean;
 
+/**
+ * @category dom
+ * @param target
+ * @param condition 条件
+ * @param token クラス名
+ * @param alt `condition` が `false` だった場合に代わりに設定するクラス名
+ * @param remove `condition` が `false` だった場合に `token` を外すか
+ * @description 条件によってクラスを設定するかどうかを決める
+ */
 export const addClassIf = (
   target: SingleOrArray<StylableElement> | NodeList,
   condition: boolean | BooleanFunc,

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["./src"],
+  "sort": ["kind"],
+  "categorizeByGroup": true,
+  "searchCategoryBoosts": {
+    "Common Items": 1.5
+  }
+}

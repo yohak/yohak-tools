@@ -76,4 +76,7 @@ export type CSSStyles = Partial<WholeCSSStyles>;
 
 export type CSSProps = keyof WholeCSSStyles;
 
+/**
+ * @internal
+ */
 export type StylableElement = HTMLElement | SVGElement;

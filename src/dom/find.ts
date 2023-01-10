@@ -3,6 +3,21 @@ import { qs } from "./qs";
 import { qsa } from "./qsa";
 import { StylableElement } from "../css/types";
 
+/**
+ * @category dom
+ * @description {@link qs}をdataSet属性の利用に絞ったショートカット版。多くの場合、`key` だけを設定して、html内にある`data-js-target="key"`の要素を取得する際に使用する。
+ * @param key 検索対象のキーワード。`null` を与えると対象の`dataSeKey`が指定されているすべての要素が対象になる
+ * @param dataSetKey 対象のdataSet属性。内部で自動的に`param-case`に変換されるので、JS的な`camelCase`で書いても、CSS的な`param-case`で書いても大丈夫
+ * @param parent 検索対象のルート要素
+ * @see {@link findMultipleByDataSet}
+ * @example ```
+ * findByDataSet("#globalHeader");
+ * document.querySelector("*[data-js-target='#globalHeader']");
+ *
+ * findByDataSet(null, "scrollTarget", parentElm);
+ * parentElm.querySelector("*[data-scroll-target]");
+ * ```
+ */
 export const findByDataSet = <T extends StylableElement>(
   key: string | null,
   dataSetKey = "js-target",
@@ -15,6 +30,19 @@ export const findByDataSet = <T extends StylableElement>(
   }
 };
 
+/**
+ * @category dom
+ * @description {@link qsa}をdataSet属性の利用に絞ったショートカット版。多くの場合、`key`を`null`にして特定のdataSet属性を持っている複数の要素を取得する際に使用する。
+ * @param key 検索対象のキーワード。`null` を与えると対象の`dataSeKey`が指定されているすべての要素が対象になる
+ * @param dataSetKey 対象のdataSet属性。内部で自動的に`param-case`に変換されるので、JS的な`camelCase`で書いても、CSS的な`param-case`で書いても大丈夫
+ * @param parent 検索対象のルート要素
+ * @return querySelectorAllと違い配列として返るのでそのまま配列関係の処理に繋げられる。
+ * @see {@link findByDataSet}
+ * @example ```
+ * findMultipleByDataSet(null, "scrollTarget");
+ * document.querySelectorAll("*[data-scroll-target]");
+ * ```
+ */
 export const findMultipleByDataSet = <T extends StylableElement>(
   key: string | null,
   dataSetKey = "js-target",
