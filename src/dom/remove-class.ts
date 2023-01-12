@@ -3,6 +3,12 @@ import { forceAsArray } from "../array/force-as-array";
 import { SingleOrArray } from "../array/types";
 import { StylableElement } from "../css/types";
 
+/**
+ * @description 対象のクラスを取り除く
+ * @category dom
+ * @param target 対象の単一オブジェクトもしくは配列
+ * @param token クラス名
+ */
 export const removeClass = (
   target: SingleOrArray<StylableElement> | NodeList,
   token: SingleOrArray<string>,

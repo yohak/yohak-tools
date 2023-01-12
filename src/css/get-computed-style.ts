@@ -4,6 +4,12 @@ import { CSSProps, NumberOrString, StylableElement, TransformKeys } from "./type
 import { extractCurrentTransform, isTransformProp } from "./utils";
 import { Optional } from "../index";
 
+/**
+ * @experimental
+ * @category css
+ * @param elm
+ * @param key
+ */
 export function getComputedStyleValue(
   elm: StylableElement,
   key: CSSProps,

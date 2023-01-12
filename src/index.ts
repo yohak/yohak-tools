@@ -22,8 +22,11 @@ export * from "./dom/qsa";
 export * from "./dom/remove-class";
 export * from "./dom/toggle-class";
 export * from "./dom/find";
+export * from "./dom/node-list-to-array";
 //
+export * from "./geom/angles";
 export * from "./geom/range-map";
+export * from "./geom/value-between";
 export * from "./geom/types";
 //
 export * from "./layout/get-document-scroll";

@@ -1,5 +1,9 @@
 import { numberToPxProps, TransformObject, transformSingleProps } from "./types";
 
+/**
+ * @internal
+ * @param str
+ */
 export const extractCurrentTransform = (str: string): TransformObject => {
   const result: TransformObject = {};
   const values = str.split(")").map((r) => r + ")");
@@ -42,10 +46,18 @@ export const extractCurrentTransform = (str: string): TransformObject => {
   return result;
 };
 
+/**
+ * @internal
+ * @param key
+ */
 export const isPxProp = (key: string): boolean => {
   return numberToPxProps.includes(key as any);
 };
 
+/**
+ * @internal
+ * @param key
+ */
 export const isTransformProp = (key: string): boolean => {
   return transformSingleProps.includes(key as any);
 };

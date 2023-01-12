@@ -4,6 +4,12 @@ import { forceAsArray } from "../array/force-as-array";
 import { SingleOrArray } from "../array/types";
 import { Optional } from "../index";
 
+/**
+ * @category css
+ * @description 対象にCSSスタイルを設定する
+ * @param target
+ * @param styles
+ */
 export const setStyle = (target: SingleOrArray<StylableElement>, styles: CSSStyles) => {
   forceAsArray(target).forEach((elm) => _setStyle(elm, styles));
 };

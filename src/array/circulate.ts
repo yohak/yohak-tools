@@ -1,3 +1,17 @@
+/**
+ * @category array
+ * @description 配列を循環させた新たな配列を返す
+ * @param target
+ * @param value
+ * @example ```
+ * const arr = [1, 2, 3, 4, 5];
+ * console.log(circulate(arr, 3));
+ * // [4, 5, 1, 2, 3]
+ * console.log(circulate(arr, -1));
+ * // [5, 1, 2, 3, 4]
+ * ```
+ */
+
 export const circulate = <T>(target: T[], value: number): T[] => {
   const arr = [...target];
   if (value === 0) return arr;

@@ -12,6 +12,20 @@ describe("toggleClass", () => {
     toggleClass(target, "wrapper");
     expect(hasClass(target, "wrapper")).toBeFalsy();
   });
+  it("should toggle with alt token", () => {
+    const target = qs("li.active")!;
+    expect(hasClass(target, "active")).toBeTruthy();
+    toggleClass(target, "active", "inactive");
+    expect(hasClass(target, "active")).toBeFalsy();
+    expect(hasClass(target, "inactive")).toBeTruthy();
+  });
+  it("should toggle with alt token", () => {
+    const target = qs("ul")!;
+    expect(hasClass(target, "active")).toBeFalsy();
+    toggleClass(target, "active", "inactive");
+    expect(hasClass(target, "active")).toBeTruthy();
+    expect(hasClass(target, "inactive")).toBeFalsy();
+  });
 });
 
 const fixture = `

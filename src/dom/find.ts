@@ -36,7 +36,6 @@ export const findByDataSet = <T extends StylableElement>(
  * @param key 検索対象のキーワード。`null` を与えると対象の`dataSeKey`が指定されているすべての要素が対象になる
  * @param dataSetKey 対象のdataSet属性。内部で自動的に`param-case`に変換されるので、JS的な`camelCase`で書いても、CSS的な`param-case`で書いても大丈夫
  * @param parent 検索対象のルート要素
- * @return querySelectorAllと違い配列として返るのでそのまま配列関係の処理に繋げられる。
  * @see {@link findByDataSet}
  * @example ```
  * findMultipleByDataSet(null, "scrollTarget");

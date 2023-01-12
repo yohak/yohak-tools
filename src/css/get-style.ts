@@ -12,6 +12,12 @@ import {
 import { extractCurrentTransform, isTransformProp } from "./utils";
 import { Optional } from "../index";
 
+/**
+ * @category css
+ * @description 対象のスタイル属性を取得する。"display,visibility,position,pointerEvents"に関してはタイプ補完が発生する
+ * @param target
+ * @param prop
+ */
 export function getStyle(target: SE, prop: "display"): Optional<DisplayValue>;
 export function getStyle(target: SE, prop: "visibility"): Optional<VisibilityValue>;
 export function getStyle(target: SE, prop: "position"): Optional<PositionValue>;
