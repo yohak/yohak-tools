@@ -5,5 +5,10 @@
   "categorizeByGroup": true,
   "searchCategoryBoosts": {
     "Common Items": 1.5
+  },
+  "navigationLinks": {
+    "GitHub": "https://github.com/yohak/yohak-tools",
+    "npm": "https://www.npmjs.com/package/yohak-tools",
+    "docs": "https://tools.yohak.design"
   }
 }
