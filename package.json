@@ -4,7 +4,7 @@
   "description": "Utility functions working at YOHAK LLC",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && typedoc",
     "test": "jest",
     "pre-publish": "tsc && typedoc && npm version patch",
     "publish": "npm publish",
