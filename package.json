@@ -6,6 +6,7 @@
   "scripts": {
     "build": "tsc && typedoc",
     "test": "jest",
+    "test:watch": "jest --watch",
     "pre-publish": "tsc && typedoc && npm version patch",
     "publish": "npm publish",
     "doc": "typedoc --watch"
