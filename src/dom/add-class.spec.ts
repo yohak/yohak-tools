@@ -34,10 +34,16 @@ describe("addClass", () => {
       expect(hasClass(elm, "foo")).toBeTruthy();
     });
   });
+  it("should respect existing classes", () => {
+    const target = qs("div")!;
+    addClass(target, "foo");
+    expect(hasClass(target, "foo")).toBeTruthy();
+    expect(hasClass(target, "hoge")).toBeTruthy();
+  });
 });
 
 const fixture = `
-<div>
+<div class="hoge">
   <ul>
     <li>1</li>
     <li>2</li>
