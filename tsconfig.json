@@ -4,6 +4,7 @@
     "module": "es6",
     "moduleResolution": "Node",
     "declaration": true,
+    "declarationMap": true,
     "removeComments": true,
     "noLib": false,
     "emitDecoratorMetadata": true,
