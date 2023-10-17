@@ -19,7 +19,7 @@ export function pxToVw(value: NumberOrString, addUnit: boolean = false): Optiona
   const px: Optional<number> = typeof value === "string" ? stripPx(value) : value;
   if (px === undefined) return undefined;
   //
-  const vw = (px / window.innerWidth) * 100;
+  const vw = (px / document.documentElement.clientWidth) * 100;
   return addUnit ? `${vw}vw` : vw;
 }
 
@@ -61,7 +61,7 @@ export function vwToPx(value: NumberOrString, addUnit = false): Optional<NumberO
   const vw: Optional<number> = typeof value === "string" ? stripVw(value) : value;
   if (vw === undefined) return undefined;
   //
-  const px = (window.innerWidth * vw) / 100;
+  const px = (document.documentElement.clientWidth * vw) / 100;
   return addUnit ? `${px}px` : px;
 }
 
