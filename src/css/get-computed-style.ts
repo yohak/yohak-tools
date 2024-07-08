@@ -1,4 +1,4 @@
-import { paramCase } from "change-case";
+import { kebabCase } from "change-case";
 import { stripPx } from "./strip-unit";
 import { CSSProps, NumberOrString, StylableElement, TransformKeys } from "./types";
 import { extractCurrentTransform, isTransformProp } from "./utils";
@@ -22,7 +22,7 @@ export function getComputedStyleValue(
     const stripped = stripPx(result as string);
     return stripped ? stripped : result;
   } else {
-    const result = computed.getPropertyValue(paramCase(key as string));
+    const result = computed.getPropertyValue(kebabCase(key as string));
     const stripped = stripPx(result);
     return stripped ? stripped : result;
   }

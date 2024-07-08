@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "module": "es6",
-    "moduleResolution": "Node",
+    "target": "es2020",
+    "module": "ESNext",
+    "moduleResolution": "node",
     "declaration": true,
     "declarationMap": true,
     "removeComments": true,
@@ -22,9 +22,6 @@
     "strict": true
   },
   "include": ["src/**/*.ts"],
-  "exclude": [
-    "node_modules",
-    "**/*.spec.ts"
-  ],
+  "exclude": ["node_modules", "**/*.spec.ts"],
   "compileOnSave": false
 }
