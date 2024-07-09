@@ -1,5 +1,6 @@
 {
   "name": "yohak-tools",
+  "type": "module",
   "version": "0.3.4",
   "description": "Utility functions working at YOHAK LLC",
   "main": "dist/index.js",
@@ -28,6 +29,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "prettier": "^3.3.2",
     "ts-jest": "^29.1.5",
+    "ts-node": "^10.9.2",
     "typedoc": "^0.26.3",
     "typescript": "^5.5.3"
   },

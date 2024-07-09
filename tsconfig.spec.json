@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2018",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["esnext", "dom"],
+    "alwaysStrict": true,
+    "declaration": true,
+    "experimentalDecorators": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "noFallthroughCasesInSwitch": false,
+    "noImplicitAny": false, // "TS7018: Object literal's property '*' implicitly has an 'any' type." が出たので無効化
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": true,
+    "strict": true,
+    "strictNullChecks": false, // "TS2345: Type 'undefined' is not assignable to type 'string'" が出たので false無効化
+    "strictPropertyInitialization": false,
+    "typeRoots": ["node_modules/@types"],
+    "types": ["node", "jest"],
+    "allowJs": true
+  },
+  "include": ["src/**/*.spec.ts"]
+}

@@ -8,3 +8,4 @@ describe("setOnReady", () => {
     setOnReady(async () => {});
   });
 });
+
