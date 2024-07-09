@@ -1,12 +1,13 @@
 import { NumberRange } from "./types";
 
 /**
+ * `from` における `value` は `to` においていくつなのかをマッピングする
  * @category geom
- * @description `from` における `value` は `to` においていくつなのかをマッピングする
  * @param from
  * @param to
  * @param value
- * @example ```
+ * @example
+ * ```
  * const result = rangeMap([0,100],[0,50],50);
  * console.log(result);
  * // 25

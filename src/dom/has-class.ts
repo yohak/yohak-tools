@@ -1,7 +1,7 @@
 import { StylableElement } from "../css/types";
 
 /**
- * @description 対象が該当のクラスを持っているかどうか調べる
+ * 対象が該当のクラスを持っているかどうか調べる
  * @param target
  * @param token クラス名
  * @category dom

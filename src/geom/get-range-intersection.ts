@@ -1,9 +1,9 @@
 /**
+ * ２つの範囲のうち重なる範囲を返す。重ならない場合はnullを返す。
  * @param a1
  * @param a2
  * @param b1
  * @param b2
- * @description ２つの範囲のうち重なる範囲を返す。重ならない場合はnullを返す。
  */
 export const getRangeOfIntersection = (
   [a1, a2]: [number, number],

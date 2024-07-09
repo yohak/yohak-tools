@@ -1,22 +1,22 @@
 /**
+ * iOS端末かどうかを判別する
  * @category is
- * @description iOS端末かどうかを判別する
  */
 export const isIOS = (): boolean => {
   return getMobileOS() === "iOS";
 };
 
 /**
+ * Android端末かどうかを判別する
  * @category is
- * @description Android端末かどうかを判別する
  */
 export const isAndroid = (): boolean => {
   return getMobileOS() === "Android";
 };
 
 /**
- * @category util
- * @description モバイル端末かどうかを判別する
+ * モバイル端末かどうかを判別する
+ * @category is
  */
 type OS = "Android" | "iOS" | "Other";
 const getMobileOS = (): OS => {

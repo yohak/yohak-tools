@@ -1,7 +1,7 @@
 import { StylableElement } from "../css/types";
 
 /**
- * @description `querySelectorAll` などで返ってくるNodeListを単純な配列に変換する。{@link qsa} などでも内部的に使用している。
+ * `querySelectorAll` などで返ってくるNodeListを単純な配列に変換する。{@link qsa} などでも内部的に使用している。
  * @param items
  * @category dom
  * @see {@link qsa}

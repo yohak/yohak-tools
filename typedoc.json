@@ -2,9 +2,13 @@
   "$schema": "https://typedoc.org/schema.json",
   "entryPoints": ["./src"],
   "sort": ["kind"],
-  "categorizeByGroup": true,
   "searchCategoryBoosts": {
     "Common Items": 1.5
+  },
+  "navigation": {
+    "includeCategories": true,
+    "includeGroups": false,
+    "includeFolders": true
   },
   "navigationLinks": {
     "GitHub": "https://github.com/yohak/yohak-tools",

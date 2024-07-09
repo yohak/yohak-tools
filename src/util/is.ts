@@ -1,14 +1,14 @@
 /**
+ * 数字かどうかを判別しアサーション情報を付与する。
  * @category is
- * @description 数字かどうかを判別しアサーション情報を付与する。
  * @param value
  */
 export const isNumber = (value: any): value is number => {
   return typeof value === "number";
 };
 /**
+ * NaNではない数字かどうかを判別しアサーション情報を付与する。
  * @category is
- * @description NaNではない数字かどうかを判別しアサーション情報を付与する。
  * @param value
  * @returns {boolean}
  */
@@ -16,8 +16,8 @@ export const isValidNumber = (value: any): value is number => {
   return isNumber(value) && !isNaN(value);
 };
 /**
+ * 文字列かどうかを判別しアサーション情報を付与する。
  * @category is
- * @description 文字列かどうかを判別しアサーション情報を付与する。
  * @param value
  * @returns {boolean}
  */
@@ -26,8 +26,8 @@ export const isString = (value: any): value is string => {
 };
 
 /**
+ * ブーリアンかどうかを判別しアサーション情報を付与する。
  * @category is
- * @description ブーリアンかどうかを判別しアサーション情報を付与する。
  * @param value
  * @returns {boolean}
  */
@@ -36,8 +36,8 @@ export const isBoolean = (value: any): value is boolean => {
 };
 
 /**
+ * 関数かどうかを判別しアサーション情報を付与する。
  * @category is
- * @description 関数かどうかを判別しアサーション情報を付与する。
  * @param value
  * @returns {boolean}
  */
@@ -47,8 +47,8 @@ export const isFunction = (value: any): value is Function => {
 };
 
 /**
+ * 配列かどうかを判別しアサーション情報を付与する。
  * @category is
- * @description 配列かどうかを判別しアサーション情報を付与する。
  * @param value
  * @returns {boolean}
  */

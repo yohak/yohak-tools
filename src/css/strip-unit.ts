@@ -1,8 +1,8 @@
 import { Optional } from "../index";
 
 /**
+ * 対象の文字列から単位を除去し数字で返す
  * @category css
- * @description 対象の文字列から単位を除去し数字で返す
  * @param value
  * @param unit 単位を特定する
  * @see {@link stripPx}
@@ -17,8 +17,8 @@ export const stripUnit = (value: string, unit: string): Optional<number> => {
   return isNaN(result) || !value ? undefined : parseInt(result);
 };
 /**
+ * 対象の文字列から"px"を除去し数字で返す
  * @category css
- * @description 対象の文字列から"px"を除去し数字で返す
  * @param value
  * @see {@link stripUnit}
  * @see {@link stripVw}
@@ -27,8 +27,8 @@ export const stripUnit = (value: string, unit: string): Optional<number> => {
  */
 export const stripPx = (value: string): Optional<number> => stripUnit(value, "px");
 /**
+ * 対象の文字列から"vw"を除去し数字で返す
  * @category css
- * @description 対象の文字列から"vw"を除去し数字で返す
  * @param value
  * @see {@link stripUnit}
  * @see {@link stripPx}
@@ -36,9 +36,10 @@ export const stripPx = (value: string): Optional<number> => stripUnit(value, "px
  * @see {@link stripPercent}
  */
 export const stripVw = (value: string): Optional<number> => stripUnit(value, "vw");
+
 /**
+ * 対象の文字列から"vh"を除去し数字で返す
  * @category css
- * @description 対象の文字列から"vh"を除去し数字で返す
  * @param value
  * @see {@link stripUnit}
  * @see {@link stripPx}
@@ -46,9 +47,10 @@ export const stripVw = (value: string): Optional<number> => stripUnit(value, "vw
  * @see {@link stripPercent}
  */
 export const stripVh = (value: string): Optional<number> => stripUnit(value, "vh");
+
 /**
+ * 対象の文字列から"percent"を除去し数字で返す
  * @category css
- * @description 対象の文字列から"percent"を除去し数字で返す
  * @param value
  * @see {@link stripUnit}
  * @see {@link stripPx}

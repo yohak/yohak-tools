@@ -5,8 +5,8 @@ import { SingleOrArray } from "../array/types";
 import { Optional } from "../index";
 
 /**
+ * 対象にCSSスタイルを設定する
  * @category css
- * @description 対象にCSSスタイルを設定する
  * @param target
  * @param styles
  */

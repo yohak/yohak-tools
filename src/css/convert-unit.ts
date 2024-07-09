@@ -3,8 +3,8 @@ import { NumberOrString } from "./types";
 import { Optional } from "../index";
 
 /**
+ * px で渡された値をそのタイミングのvwに変換する
  * @category css
- * @description px で渡された値をそのタイミングのvwに変換する
  * @param value 数字でも `100px`のような文字列でも両方受け付ける
  * @param addUnit 単位として"vw" を付与するか。
  * @return `addUnit` が `true` だとvwが付与された文字列で、`false` だと数字として返る
@@ -24,8 +24,8 @@ export function pxToVw(value: NumberOrString, addUnit: boolean = false): Optiona
 }
 
 /**
+ * px で渡された値をそのタイミングのvwに変換する
  * @category css
- * @description px で渡された値をそのタイミングのvwに変換する
  * @param value 数字でも `100px`のような文字列でも両方受け付ける
  * @param addUnit 単位として"vw" を付与するか。
  * @return `addUnit` が `true` だとvwが付与された文字列で、`false` だと数字として返る
@@ -45,8 +45,8 @@ export function pxToVh(value: NumberOrString, addUnit: boolean = false): Optiona
 }
 
 /**
+ * vw で渡された値をそのタイミングのpxに変換する
  * @category css
- * @description vw で渡された値をそのタイミングのpxに変換する
  * @param value 数字でも `100vw`のような文字列でも両方受け付ける
  * @param addUnit 単位として"px" を付与するか。
  * @return `addUnit` が `true` だとpxが付与された文字列で、`false` だと数字として返る
@@ -66,8 +66,8 @@ export function vwToPx(value: NumberOrString, addUnit = false): Optional<NumberO
 }
 
 /**
+ * vh で渡された値をそのタイミングのpxに変換する
  * @category css
- * @description vh で渡された値をそのタイミングのpxに変換する
  * @param value 数字でも `100vh`のような文字列でも両方受け付ける
  * @param addUnit 単位として"px" を付与するか。
  * @return `addUnit` が `true` だとvhが付与された文字列で、`false` だと数字として返る

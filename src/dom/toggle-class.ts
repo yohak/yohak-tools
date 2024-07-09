@@ -4,7 +4,7 @@ import { SingleOrArray } from "../array/types";
 import { StylableElement } from "../css/types";
 
 /**
- * @description 対象のクラスの有無を切り替える
+ * 対象のクラスの有無を切り替える
  * @category dom
  * @param target 対象の単一オブジェクトもしくは配列
  * @param token クラス名

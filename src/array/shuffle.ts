@@ -1,7 +1,7 @@
 // https://stackoverflow.com/a/2450976/2207021
 /**
+ * 順番をランダムにした新しい配列を返す
  * @category array
- * @description 順番をランダムにした新しい配列を返す
  * @param array
  */
 export function shuffle<T extends any>(array: T[]): T[] {

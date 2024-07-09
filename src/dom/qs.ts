@@ -1,12 +1,13 @@
 import { StylableElement } from "../css/types";
 
 /**
+ * `document.querySelector` のショートカット版。主に文字数を削減するために使用している。
  * @category dom
- * @description `document.querySelector` のショートカット版。主に文字数を削減するために使用している。
  * @param query
  * @param queryRoot クエリを実行するルートオブジェクト
  * @see {@link qsa}
- * @example ```
+ * @example
+ * ```
  * qs("#hoge");
  * // is equivalent to
  * document.querySelector("#hoge");

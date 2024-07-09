@@ -13,8 +13,8 @@ import { extractCurrentTransform, isTransformProp } from "./utils";
 import { Optional } from "../index";
 
 /**
+ * 対象のスタイル属性を取得する。"display,visibility,position,pointerEvents"に関してはタイプ補完が発生する
  * @category css
- * @description 対象のスタイル属性を取得する。"display,visibility,position,pointerEvents"に関してはタイプ補完が発生する
  * @param target
  * @param prop
  */

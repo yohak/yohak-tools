@@ -1,9 +1,9 @@
 import { SingleOrArray } from "./types";
 
 /**
+ * `target` が arrayではない場合、`[target]` という形で返す
  * @internal
  * @category array
- * @description `target` が arrayではない場合、`[target]` という形で返す
  * @param target
  */
 export const forceAsArray = <T>(target: SingleOrArray<T>): T[] => {

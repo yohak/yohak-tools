@@ -3,8 +3,8 @@ import { StylableElement } from "../css/types";
 import { Point } from "../geom/types";
 
 /**
+ * ドキュメント左上を基準とした対象の座標を取得する
  * @category layout
- * @description ドキュメント左上を基準とした対象の座標を取得する
  * @param target
  * @see  {@link getOffsetXFromDocument}, {@link getOffsetYFromDocument}
  */
@@ -17,8 +17,8 @@ export const getOffsetFromDocument = (target: StylableElement): Point => {
 };
 
 /**
+ * ドキュメント左上を基準とした対象のX座標を取得する
  * @category layout
- * @description ドキュメント左上を基準とした対象のX座標を取得する
  * @param target
  * @see {@link getOffsetFromDocument}, {@link getOffsetYFromDocument}
  */
@@ -29,8 +29,8 @@ export const getOffsetXFromDocument = (target: StylableElement): number => {
 };
 
 /**
+ * ドキュメント左上を基準とした対象のY座標を取得する
  * @category layout
- * @description ドキュメント左上を基準とした対象のY座標を取得する
  * @param target
  * @see  {@link getOffsetFromDocument}, {@link getOffsetXFromDocument}
  */

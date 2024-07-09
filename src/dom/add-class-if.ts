@@ -9,14 +9,15 @@ import { isFunction } from "../util/is";
 export type BooleanFunc = (elm: StylableElement) => boolean;
 
 /**
+ * 条件によってクラスを設定するかどうかを決める
  * @category dom
  * @param target
  * @param condition 条件。関数でも渡せる
  * @param token クラス名
  * @param alt `condition` が `false` だった場合に代わりに設定するクラス名
  * @param remove `condition` が `false` だった場合に `token` を外すか
- * @description 条件によってクラスを設定するかどうかを決める
- * @example ```
+ * @example
+ * ```ts
  * const condition = Math.random() > 0.5;
  * addClassIf(elm, condition, "active");
  * //

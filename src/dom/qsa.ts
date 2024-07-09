@@ -2,14 +2,15 @@ import { nodeListToArray } from "./node-list-to-array";
 import { StylableElement } from "../css/types";
 
 /**
- * @description `document.querySelectorAll` のショートカット版。
+ * `document.querySelectorAll` のショートカット版。
  * `querySelectorAll` は NodeListオブジェクトを返すのでそのままではmapやforEachなどの配列処理を行えない。
  * `qsa` は配列で返すためのその後の処理を書きやすい。
  * @param query
  * @param queryRoot クエリを実行するルートオブジェクト
  * @category dom
  * @see {@link qs}
- * @example ```
+ * @example
+ * ```
  * // 以下はほぼ同等
  * qsa(".hoge");
  * document.querySelectorAll(".hoge");

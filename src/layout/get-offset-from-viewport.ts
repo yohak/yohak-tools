@@ -3,9 +3,8 @@
 import { getDocumentScroll, getDocumentScrollX, getDocumentScrollY } from "./get-document-scroll";
 import { Point } from "../geom/types";
 /**
+ * 現在のブラウザのビューポート左上を基準として、対象の座標を取得する
  * @category layout
- * @description 現在のブラウザのビューポート左上を基準として、対象の座標を取得する
- * @param self 座標を取得する要素
  * @param target 基準となる要素
  * @see {@link getOffsetXFromViewport}
  * @see {@link getOffsetYFromViewport}
@@ -26,9 +25,8 @@ export const getOffsetFromViewport = (target: HTMLElement): Point => {
 };
 
 /**
+ * 現在のブラウザのビューポート左上を基準として、対象のX座標を取得する
  * @category layout
- * @description 現在のブラウザのビューポート左上を基準として、対象のX座標を取得する
- * @param self 座標を取得する要素
  * @param target 基準となる要素
  * @see {@link getOffsetFromViewport}
  * @see {@link getOffsetYFromViewport}
@@ -44,9 +42,8 @@ export const getOffsetXFromViewport = (target: HTMLElement): number => {
 };
 
 /**
+ * 現在のブラウザのビューポート左上を基準として、対象のY座標を取得する
  * @category layout
- * @description 現在のブラウザのビューポート左上を基準として、対象のY座標を取得する
- * @param self 座標を取得する要素
  * @param target 基準となる要素
  * @see {@link getOffsetFromViewport}
  * @see {@link getOffsetXFromViewport}
